@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imgs/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/editFlavor.css">
+    <title>Editar sabor</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <img id="logo" src="/imgs/logo.png" alt="logo de bollos nancy">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/flavors">Sabores</a></li>
+            <li><a href="/addFlavor">A&ntilde;adir sabor</a></li>
+        </ul>
+    </nav>
+
+    <h1>Editar sabor</h1>
+
+    <div class="container">
+        <form action="/editFlavor/<%= bollo.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
+            <label for="flavor">Sabor:</label>
+            <input type="text" name="flavor" id="flavor" maxlength="20" value="<%= bollo.flavor %>">
+
+            <label for="ingredients">Ingredientes:</label>
+            <input type="text" name="ingredients" id="ingredients" placeholder="Separados por una coma. Ejemplo: (300gr de azúcar,1 litro de agua)" maxlength="200" value="<%= bollo.ingredients %>">
+        
+            <label for="price">Precio:</label>
+            <input type="number" name="price" id="price" value="<%= bollo.price %>" placeholder="Ej: (10)">
+
+            <label for="imgUpload">Imagen:</label>
+            <input type="file" name="file" id="imageUpload">
+
+            <button type="submit">Editar</button>
+        </form>
+    </div>
+</body>
+</html>

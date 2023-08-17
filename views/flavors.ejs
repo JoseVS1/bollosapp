@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3539226c34.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="imgs/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/flavors.css">
+    <title>Sabores</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><img id="logo" src="imgs/logo.png" alt="logo de bollos nancy"></li>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/flavors">Sabores</a></li>
+            <li><a href="/addFlavor">A&ntilde;adir sabor</a></li>
+        </ul>
+    </nav>
+    
+    <% if (bollos.length > 0) { %>
+        <ul>
+            <% for (let i = 0; i < bollos.length; i++) { %>
+                <li>
+                    <section class="card">
+                        <h2><%= bollos[i].flavor %></h2>
+                        <% if (bollos[i].imageUrl) { %>
+                            <img src="<%= bollos[i].imageUrl %>" alt="Bollo de <%= bollos[i].flavor %>">
+                        <% } %>
+                        <h2>Ingredientes</h2>
+                        <ul>
+                            <% bollos[i].ingredients.split(",").forEach(x => { %>
+                                <li><%= x %></li>
+                            <% }); %>
+                        </ul>
+
+                        <div class="buttons-container">
+                            <a href="/editFlavor/<%= bollos[i].id %>" id="editButton"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <form action="/deleteFlavor/<%= bollos[i].id %>?_method=DELETE" method="POST">
+                                <button id="deleteButton" type="submit"><i class="fa-solid fa-trash"></i></button>
+                            </form>
+                        </div>
+                    </section>
+                </li>
+            <% } %>
+        </ul>
+    <% } else { %>
+        <h1>No has agregado ningún sabor!</h1>
+    <% } %>
+</body>
+</html>

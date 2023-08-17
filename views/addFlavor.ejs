@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imgs/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/addFlavor.css">
+    <title>A&ntilde;adir sabor</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><img id="logo" src="imgs/logo.png" alt="logo de bollos nancy"></li>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/flavors">Sabores</a></li>
+            <li><a href="/addFlavor">A&ntilde;adir sabor</a></li>
+        </ul>
+    </nav>
+    
+    <h1>A&ntilde;adir un nuevo sabor</h1>
+
+    <div class="container">
+        <form action="/addFlavor" enctype="multipart/form-data" method="POST">
+            <label for="flavor">Sabor:</label>
+            <input type="text" name="flavor" id="flavor" maxlength="20">
+
+            <label for="ingredients">Ingredientes:</label>
+            <input type="text" name="ingredients" id="ingredients" placeholder="Separados por una coma. Ejemplo: (300gr de azúcar,1 litro de agua)" maxlength="200">
+        
+            <label for="price">Precio:</label>
+            <input type="number" name="price" id="price" placeholder="Ej: (10)">
+
+            <label for="imgUpload">Imagen:</label>
+            <input type="file" name="file" id="imageUpload">
+
+            <button type="submit">A&ntilde;adir</button>
+        </form>
+    </div>
+</body>
+</html>

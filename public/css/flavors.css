@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #f0e6f7, #d5e2f2);
+      
+}
+
+nav, nav ul {
+    display: flex;
+    height: 8rem;
+    width: 100%;
+    font-size: 2.1rem;
+    background: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+    width: 7rem;
+    height: 7rem;
+    padding: 0;
+}
+
+nav ul {
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 2rem;
+}
+
+nav li a:hover {
+    background: #e6e5e5;;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 2.5rem;
+}
+
+h1 {
+    font-size: 12rem;
+    color: #333; /* Deep navy blue */
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+p {
+    color: #666;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 87.8vh;
+}
+
+body > ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rem 0 5rem 0;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.card {
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0 3rem 0;
+    border-radius: 2.5rem;
+    margin-bottom: 5rem;
+    background: #f8f8f8;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.card img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.card h2 {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.card ul {
+    width: 25rem;
+    font-size: 2rem;
+    list-style: inside;
+    margin-bottom: 2rem;
+}
+
+.buttons-container {
+    display: flex;
+    width: 50%;
+    height: 3rem;
+    justify-content: space-around;
+}
+
+#editButton, #deleteButton {
+    font-size: 3rem;
+}
+
+#editButton {
+    color: rgb(53, 53, 175);
+}
+
+.card i:visited, .card a:visited {
+    text-decoration: none;
+    color: rgb(53, 53, 175);
+}
+
+#editButton:hover {
+    color: rgb(68, 68, 224);;
+}
+
+#deleteButton {
+    color: rgb(197, 7, 7);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#deleteButton:hover {
+    color: rgb(235, 10, 10);
+}
+
+/* Tablet */
+@media only screen and (min-width: 671px) and (max-width: 1160px) {
+    nav ul {
+        justify-content: space-evenly;
+    }
+}
+
+/* Smartphone */
+@media only screen and (max-width: 670px) {
+    nav, nav ul {
+        flex-direction: column;
+        height: 22rem;
+        padding-bottom: 2rem;
+    }
+
+    #logo {
+        margin-top: 2rem;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    nav li {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    body > ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 0.7rem;
+    }
+}

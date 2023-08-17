@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    /*background-color: rgba(243, 247, 249, 0.9);*/
+    background: linear-gradient(135deg, #e6f7ff, #f3e6ff);
+}
+
+nav, ul {
+    display: flex;
+    height: 8rem;
+    width: 100%;
+    font-size: 2.1rem;
+    background: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+    width: 7rem;
+    height: 7rem;
+    padding: 0;
+}
+
+ul {
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+}
+
+li {
+    margin-left: 2rem;
+}
+
+li a:hover {
+    background: #e6e5e5;;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    padding: 2.5rem;
+}
+
+h1 {
+    font-size: 12rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 3rem;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    background: #f8f8f8;
+    padding: 2rem;
+}
+
+p {
+    color: #666;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 87.8vh;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90rem;
+    height: 50rem;
+    padding: 4rem;
+}
+
+/* Tablet */
+@media only screen and (min-width: 671px) and (max-width: 1160px) {
+    .container {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    section {
+        width: 75rem;
+    }
+
+    ul {
+        justify-content: space-evenly;
+    }
+
+    .main {
+        margin-top: 3rem;
+    }
+
+    h1 {
+        margin: 3rem;
+    }
+
+    .img-container {
+        height: 47rem;
+    }
+
+    .img-container img {
+        width: 40rem;
+    }
+
+    p {
+        margin-top: 3rem;
+    }
+}
+
+/* Smartphone */
+@media only screen and (max-width: 670px) {
+    nav, ul {
+        flex-direction: column;
+        height: 22rem;
+        padding-bottom: 2rem;
+    }
+
+    #logo {
+        margin-top: 2rem;
+    }
+
+    ul {
+        justify-content: center;
+    }
+
+    li {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    section {
+        width: 100%;
+        padding: 0 4rem 0 4rem;
+    }
+
+    h1 {
+        font-size: 7rem;
+
+    }
+
+    .img-container {
+        height: 35rem;
+        justify-content: flex-start;
+    }
+
+    .img-container img {
+        width: 28rem;
+    }
+
+    .main {
+        height: 52rem;
+    }
+    
+    p {
+        margin-top: 3rem;
+    }
+
+    a {
+        padding: 0.7rem;
+    }
+}
