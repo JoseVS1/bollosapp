@@ -10,9 +10,7 @@ html {
 }
 
 body {
-    /*background-color: rgba(243, 247, 249, 0.9);*/
     background: linear-gradient(135deg, #f0f7f2, #d5e8e1);
-
 }
 
 nav, ul {
@@ -52,7 +50,7 @@ a {
 
 h1 {
     font-size: 5rem;
-    color: #333; /* Deep navy blue */
+    color: #333;
     text-align: center;
     margin-top: 4rem;
 }
