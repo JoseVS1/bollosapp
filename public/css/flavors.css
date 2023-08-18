@@ -210,4 +210,27 @@ body > ul {
     .card {
         width: 33rem;
     }
+
+    nav, nav ul {
+        flex-direction: column;
+        height: 22rem;
+        padding-bottom: 2rem;
+    }
+
+    #logo {
+        margin-top: 2rem;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    nav li {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    nav a {
+        padding: 0.7rem;
+    }
 }
