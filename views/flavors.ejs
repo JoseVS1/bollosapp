@@ -27,6 +27,7 @@
                 <li>
                     <section class="card">
                         <h2><%= bollos[i].flavor %></h2>
+                        <span id="price">$<%= bollos[i].price %></span>
                         <% if (bollos[i].imageUrl) { %>
                             <img src="<%= bollos[i].imageUrl %>" alt="Bollo de <%= bollos[i].flavor %>">
                         <% } %>

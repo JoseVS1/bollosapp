@@ -98,7 +98,7 @@ body > ul {
 }
 
 .card h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     font-size: 2.5rem;
 }
 
@@ -154,6 +154,11 @@ body > ul {
 
 #no-flavors {
     font-size: 5rem;
+}
+
+#price {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 /* Tablet */
