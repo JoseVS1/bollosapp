@@ -168,7 +168,7 @@ body > ul {
 }
 
 /* Smartphone */
-@media only screen and (max-width: 670px) {
+@media only screen and (min-width: 441px) and (max-width: 670px) {
     nav, nav ul {
         flex-direction: column;
         height: 22rem;
@@ -199,5 +199,15 @@ body > ul {
 
     #no-flavors {
         font-size: 3rem;
+    }
+
+    .card {
+        width: 37rem;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .card {
+        width: 33rem;
     }
 }
